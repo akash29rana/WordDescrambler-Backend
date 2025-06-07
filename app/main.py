@@ -9,7 +9,7 @@ app = FastAPI()
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","http://192.168.1.3:3000"],  # List of allowed origins
+    allow_origins=["https://api.wordsdescrambler.com","https://worddescrambler-backend.onrender.com"],  # List of allowed origins
     allow_credentials=True,
     allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"],  # Allow all headers

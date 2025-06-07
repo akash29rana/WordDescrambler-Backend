@@ -18,11 +18,11 @@ def get_meaning_of_word(word: str) -> str:
             data = res.json()
             meaning = data[0]["meanings"][0]["definitions"][0]["definition"]
             # redis_client.setex(f"meaning:{word}", 86400, meaning)  # cache for 1 day
-            result["meaning"] = meaning
+            result["meaning"] = meaning + "akash"
             return result
     except:
         pass
 
     # redis_client.setex(f"meaning:{word}", 86400, "No meaning found.")
-    result["meaning"] = "No meaning found."
+    result["meaning"] = "No meaning found.akash"
     return result
